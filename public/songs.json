@@ -1,0 +1,41 @@
+{
+    "songs": [{
+            "id": "1",
+            "add": "03.04.2015",
+            "title": "Sam Feldt ft. Kimberly Anne - Show Me Love (EDX's Indian Summer Remix)",
+            "descripction": "A soulful singer/songwriter from a Small English town with a penchant for crafting moving and evocative folk-pop confections in the vein of Ed Sheeran, Foy Vance, and Ben Howard, James Bay hails from the North Hertf...",
+            "album": "INDIAN SUMMER",
+            "url": "https://www.youtube.com/embed/rCqQGgM0Y5I",
+            "itunes": "https://geo.itunes.apple.com/us/album/show-me-love-feat-kimberly-anne-edxs-indian-summer-radio-mix/1022080863?i=1022081286&mt=1&app=music",
+            "audio": "2,381",
+            "likes": "10k",
+            "coments": "93"
+        },
+
+        {
+            "id": "2",
+            "add": "20.07.2015",
+            "title": "Sam Feldt - Show Me Love (EDX's Indian Summer Remix)",
+            "descripction": "A soulful singer/songwriter from a Small English town with a penchant for crafting moving and evocative folk-pop confections in the vein of Ed Sheeran, Foy Vance, and Ben Howard, James Bay hails from the North Hertf...",
+            "album": "INDIAN SUMMER REMIX",
+            "url": "https://www.youtube.com/embed/W3oCipL7lpo",
+            "itunes": "https://geo.itunes.apple.com/us/album/show-me-love-feat-kimberly-anne-edx-remix/1016519597?i=1016519601&mt=1&app=music",
+            "audio": "213,381",
+            "likes": "8k",
+            "coments": "5"
+        },
+
+        {
+            "id": "3",
+            "add": "03.04.2015",
+            "title": "James Bay - Let It Go (Bearson Remix)",
+            "descripction": "A soulful singer/songwriter from a Small English town with a penchant for crafting moving and evocative folk-pop confections in the vein of Ed Sheeran, Foy Vance, and Ben Howard, James Bay hails from the North Hertf...",
+            "album": "CHILL NATION",
+            "url": "https://www.youtube.com/embed/2bSAPFkxJKg",
+            "itunes": "https://geo.itunes.apple.com/us/album/let-it-go-bearson-remix/1434716330?i=1434716335&mt=1&app=music",
+            "audio": "78.121",
+            "likes": "10k",
+            "coments": "17"
+        }
+    ]
+}

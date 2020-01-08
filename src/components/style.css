@@ -1,0 +1,2254 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+#root {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    /* height: 100vh; */
+    overflow-x: hidden;
+}
+
+strong {
+    color: red;
+}
+
+/* MODAL */
+
+.close {
+    z-index: 4;
+}
+
+.newDiv {
+    width: 100vw;
+    height: 500px;
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255);
+    animation-name: modalAnimations;
+    animation-duration: 0.5s;
+    display: block;
+    z-index: 1;
+}
+
+.nevDivHide {
+    display: none;
+}
+
+.modal-div {
+    position: fixed;
+    text-align: center;
+    background: white;
+    width: 80%;
+    height: 83%;
+    top: 50%;
+    left: 50%;
+    border: 2px solid lightgray;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.modalDiv {
+    position: absolute;
+    top: 97%;
+    left: 84%;
+    z-index: 2;
+}
+
+.modal-display-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    animation-name: modalAnimations;
+    animation-duration: 0.5s;
+    display: block;
+    z-index: 4;
+}
+
+.modal-display-none {
+    display: none;
+}
+
+.modalDiv .buttonAddSong {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid black;
+    height: 50px;
+    width: 100px;
+    transition: 0.3s;
+}
+
+.modalDiv .buttonAddSong:hover {
+    background-color: black;
+    color: white;
+    opacity: 0.6;
+}
+
+.modal-div .close {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+@keyframes modalAnimations {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+/* MODAL FORM */
+
+.close {
+    z-index: 4;
+}
+
+form {
+    text-align: center;
+    margin: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 25px;
+}
+
+.react-datepicker__input-container {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.react-datepicker__input-container input {
+    width: 50%;
+    text-align: center;
+    border: none;
+    margin: 0;
+}
+
+.divDate {
+    margin-left: 10px;
+    font-size: 15px;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    margin-top: 0px;
+    width: 30%;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 15px;
+}
+
+form button {
+    margin: 20px auto;
+    background-color: transparent;
+    border: 1px solid gray;
+    text-transform: uppercase;
+    width: 150px;
+    height: 40px;
+    transform: 0.3s;
+    cursor: pointer;
+}
+
+form button:hover {
+    opacity: 0.6;
+    background-color: black;
+    color: white;
+}
+
+form span {
+    color: red;
+    font-size: 10px;
+}
+
+textarea {
+    min-width: 40%;
+    max-width: 40%;
+    max-height: 100px;
+    min-height: 100px;
+    padding: 20px;
+    border: 1px solid gray;
+    font-size: 15px;
+}
+
+/* MODAL2 */
+
+.newDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newDiv ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.newDiv ul li {
+    margin: 10px 0;
+}
+
+.newDiv h1 {
+    margin-top: 10px;
+}
+
+.newDiv iframe {
+    width: 40%;
+    height: 40%;
+}
+
+.newDiv button {
+    margin: 20px 0 0 10px;
+    transition: 0.3s
+}
+
+
+
+
+
+
+/* HEADER */
+
+.wrapper {
+    /* display: none; */
+    height: 100vh;
+    background-image: url("img/napisDJ.png"), url("img/djLogo.png");
+    background-repeat: no-repeat;
+    background-position-y: 38%, 0%;
+    background-position-x: 46.5%, center;
+    background-size: 27% 40%, cover;
+    /* background-size: contain contain; */
+}
+
+.menu {
+    position: fixed;
+    opacity: 0.7;
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(229, 230, 230);
+    z-index: 2;
+}
+
+.menu a {
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 10px;
+    color: black;
+    padding: 10px;
+    transition: 0.1s ease;
+    ;
+
+}
+
+.menu a:hover {
+    border-bottom: 2px solid black;
+}
+
+.menu .active {
+    border-bottom: 2px solid black;
+}
+
+/* DISCOGRAPY */
+
+.wrapperDisc {
+    /* display: none; */
+    background-image: url(img/bgcDisco.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0% 100%;
+    min-height: 1900px;
+}
+
+.naglowek {
+    width: 100%;
+    text-align: center;
+}
+
+.naglowek img {
+    width: 25%;
+    margin: 50px 0 50px 0;
+}
+
+.naglowek p {
+    display: block;
+    width: 35%;
+    margin: 0 auto;
+    color: rgb(121, 130, 133)
+}
+
+.discSongs {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: 150px auto 50px;
+}
+
+.discSongs:last-of-type {
+    margin-bottom: 0;
+}
+
+
+.discSongs .date {
+    width: 50%;
+}
+
+.date span {
+    display: inline-flex;
+    font-size: 12px;
+    color: rgb(128, 128, 128);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    width: 96%;
+    border-bottom: 2px solid black
+}
+
+.date h3 {
+    font-size: 15px;
+}
+
+.discSongs .description {
+    width: 50%;
+    position: relative;
+    min-height: 250px;
+}
+
+.discSongs .description h1 {
+    margin-bottom: 8px;
+}
+
+.discSongs .description p {
+    color: rgb(172, 172, 172);
+    min-height: 150px;
+}
+
+.discSongs .description button {
+    cursor: pointer;
+    margin-top: 20px;
+    border: none;
+    font-size: 15px;
+    width: 190px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.discSongs .description .play1 {
+    background-image: url(img/playButton1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+.discSongs .description .play1 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.discSongs .description .play2 {
+    background-image: url(img/playButton2.jpg);
+    background-repeat: no-repeat;
+
+    background-position: center;
+    color: black;
+}
+
+.discSongs .description .play3 {
+    background-image: url(img/playButton3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+/* SEKCJA CONCERT TOURS */
+
+.wrapperConcert {
+    /* display: none; */
+    height: auto;
+    min-height: 130vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-image: url(img/logoConcert.png);
+    background-position: 0 100%;
+    position: relative;
+    background-size: auto;
+}
+
+
+
+.wrapperConcert .descTours {
+    position: absolute;
+    top: 52%;
+    left: 15%;
+    text-align: left;
+}
+
+.wrapperConcert .descTours .date {
+    width: 30%;
+}
+
+.descTours .present p:first-child {
+    margin-top: 50px;
+}
+
+.descTours .present {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.descTours .present p {
+    margin: 0;
+    text-align: left;
+    width: 40%;
+}
+
+.descTours .present p:first-child {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: black;
+}
+
+.descTours .present p:last-child {
+    color: rgb(172, 172, 172);
+}
+
+.descTours .present button {
+    cursor: pointer;
+    background-color: transparent;
+    margin-top: 50px;
+    border: 2px solid rgb(172, 172, 172);
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    transition: 0.3s;
+}
+
+.descTours .present .buyOnline:hover {
+    background-color: black;
+    color: white;
+    opacity: 0.6;
+}
+
+/* SEKCJA LATTER COMPOSITIONS */
+.wrapperLatterX {
+    position: relative;
+    z-index: 1;
+}
+
+.songPlayer {
+    display: flex;
+    width: 60%;
+    margin: 150px auto 50px;
+    position: relative;
+    min-height: 300px;
+
+}
+
+.square {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, 50%) rotate(45deg);
+    transform-origin: center;
+    background-color: rgb(245, 246, 246);
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+}
+
+.aboutSong {
+    width: 50%;
+    background-color: rgb(245, 246, 246);
+    padding: 30px;
+    position: relative;
+}
+
+.likes {
+    position: absolute;
+    right: 2%;
+    bottom: 5%;
+    color: rgb(121, 130, 133);
+}
+
+.likes span {
+    margin-right: 10px;
+}
+
+.likes .fas {
+    margin-right: 5px;
+}
+
+.aboutSong .date span {
+    width: 75%;
+    border-bottom: 1px solid black;
+}
+
+.aboutSong h1 {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.aboutSong p {
+    color: rgb(121, 130, 133);
+    margin-top: 20px;
+}
+
+.aboutSong a {
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    line-height: 45px;
+    margin: 20px 0 20px;
+    border: 1px solid rgb(121, 130, 133);
+    background-color: transparent;
+    width: 150px;
+    height: 45px;
+    transition: 0.3s
+}
+
+
+.aboutSong a:hover {
+    background-color: black;
+    color: white;
+    opacity: 0.5;
+}
+
+.wrapperLatter:nth-of-type(odd) .songPlayer .aboutSong {
+    order: 2;
+}
+
+.video {
+    width: 50%;
+}
+
+.video iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 359px) {
+    /*HEADER*/
+
+
+
+    .wrapper {
+        background-size: 100% 50%, cover;
+    }
+
+    .menu {
+        padding-top: 20px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .menu a {
+        font-size: 20px;
+
+    }
+
+
+    /* DISCOGRAPHY */
+
+    .wrapperDisc {
+        /* display: none; */
+        background-size: auto;
+        background-position: 0% 110%;
+        height: auto;
+    }
+
+    .naglowek img {
+        width: 80%;
+        margin: 50px 0 30px 0;
+    }
+
+    .naglowek p {
+        display: block;
+        width: 70%;
+        font-size: 15px;
+    }
+
+    .discSongs {
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 80px auto 90px;
+    }
+
+    .discSongs .date {
+        width: 70%;
+        margin-bottom: 40px;
+    }
+
+    .discSongs .description {
+        width: 70%;
+        text-align: center;
+    }
+
+    .discSongs .description h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .discSongs .description p {
+        font-size: 15px;
+    }
+
+    .discSongs:nth-of-type(3) .description p {
+        color: black;
+    }
+
+    .discSongs .description button {
+        margin-bottom: 30px;
+    }
+
+    /* CONCERT */
+    .wrapperConcert {
+        height: auto;
+        background-size: auto;
+        background-position: 0% 60%;
+        text-align: center;
+    }
+
+    .wrapperConcert .naglowek p {
+        color: black;
+    }
+
+
+    .wrapperConcert .descTours {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .wrapperConcert .descTours .date {
+        margin: 50px auto;
+        width: 70%;
+    }
+
+    .wrapperConcert .descTours .date span {
+        color: black;
+    }
+
+    .descTours .present {
+        align-items: center;
+    }
+
+
+    .descTours .present p {
+        margin: 0;
+        text-align: center;
+        color: black;
+        font-size: 18px;
+        width: 70%;
+    }
+
+    .descTours .present p:first-child {
+        margin-top: 0px;
+    }
+
+    .descTours .present button {
+        background-color: black;
+        color: white;
+        opacity: 0.6;
+        margin-bottom: 40px;
+    }
+
+    /* LATTER COMPOSITIONS */
+
+    .wrapperLatter {
+        height: 0;
+        min-height: 100vh
+    }
+
+    .songPlayer {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        height: 100%;
+        margin: 50px auto 0;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .square {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        transform-origin: center;
+        background-color: rgb(245, 246, 246);
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+    }
+
+
+    .aboutSong {
+        width: 100%;
+        height: 50%;
+        background-color: rgb(245, 246, 246);
+        padding: 10px;
+        text-align: center;
+    }
+
+    .likes {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        color: rgb(121, 130, 133);
+        font-size: 12px;
+        margin-top: 0px
+    }
+
+    .likes span {
+        margin-right: 10px;
+        width: 100%;
+    }
+
+    .likes .fas {
+        margin-right: 5px;
+    }
+
+    .video {
+        width: 100%;
+        height: 50%;
+    }
+
+    .aboutSong .date span {
+        display: block;
+        margin: 0 auto;
+        width: 75%;
+        border-bottom: 1px solid black;
+    }
+
+
+    .aboutSong h1 {
+        margin-top: 5px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+
+    .aboutSong p {
+        color: rgb(121, 130, 133);
+        font-size: 13px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .aboutSong a {
+        margin-top: 10px;
+        width: 130px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 12px;
+        background-color: black;
+        color: white;
+        opacity: 0.5;
+        border: 2px solid lightgray;
+    }
+
+    /* MODAL */
+
+    .close {
+        z-index: 4;
+    }
+
+    .modal-div {
+        border: 2px solid lightgray;
+        height: 90%;
+    }
+
+
+    .modalDiv {
+        top: 97%;
+        left: 50%;
+    }
+
+    .modal-display-block {
+        z-index: 4;
+    }
+
+
+    .modalDiv .buttonAddSong {
+        margin: 70px 0 20px;
+        background-color: black;
+        border: 2px solid lightgray;
+        line-height: 40px;
+        color: white;
+        opacity: 0.6;
+        height: 40px;
+        width: 120px;
+    }
+
+    /* MODAL FORM */
+
+    form {
+        text-align: center;
+        margin: 15px;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+    }
+
+    input {
+        width: 70%;
+        height: 18px;
+        font-size: 14px;
+    }
+
+    form button {
+        margin: 20px auto;
+        opacity: 0.6;
+        background-color: black;
+        color: white;
+    }
+
+    form span {
+        font-size: 9px;
+    }
+
+    textarea {
+        min-width: 70%;
+        max-width: 70%;
+        max-height: 70px;
+        min-height: 70px;
+        padding: 10px;
+        border: 1px solid gray;
+        font-size: 10px;
+    }
+
+    /* MODAL2 */
+
+    .newDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newDiv ul {
+        list-style: none;
+        margin: 10px 0;
+    }
+
+    .newDiv ul li {
+        margin: 8px 0;
+    }
+
+    .newDiv ul li strong {
+        text-align: center;
+        width: 70%;
+    }
+
+
+    .newDiv h1 {
+        margin-top: 0px;
+    }
+
+    .newDiv iframe {
+        width: 70%;
+        height: 30%;
+    }
+
+    .buttonsModal2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .newDiv button {
+        margin: 10px 0 0 10px;
+        transition: 0.3s
+    }
+
+}
+
+@media only screen and (min-width : 360px) and (max-width : 480px) {
+
+
+    /* MODAL2 */
+
+    .newDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newDiv ul {
+        list-style: none;
+        margin: 20px 0;
+    }
+
+    .newDiv ul li {
+        margin: 10px 0;
+    }
+
+    .newDiv h1 {
+        margin-top: 10px;
+    }
+
+    .newDiv iframe {
+        width: 70%;
+        height: 30%;
+    }
+
+    .buttonsModal2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .newDiv button {
+        margin: 20px 0 0 10px;
+        transition: 0.3s
+    }
+
+
+    /* MODAL FORM */
+
+    .close {
+        z-index: 4;
+    }
+
+    form {
+        text-align: center;
+        margin: 15px;
+    }
+
+    label {
+        display: block;
+        margin-top: 20px;
+    }
+
+    input {
+        width: 70%;
+        height: 18px;
+        font-size: 14px;
+    }
+
+    form button {
+        margin: 20px auto;
+        opacity: 0.6;
+        background-color: black;
+        color: white;
+    }
+
+    form span {
+        font-size: 9px;
+    }
+
+    textarea {
+        min-width: 70%;
+        max-width: 70%;
+        max-height: 70px;
+        min-height: 70px;
+        padding: 10px;
+        border: 1px solid gray;
+        font-size: 10px;
+    }
+
+    /*HEADER*/
+
+    .wrapper {
+        background-size: 100% 50%, cover;
+    }
+
+    .menu {
+        padding-top: 20px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .menu a {
+        font-size: 20px;
+
+    }
+
+
+    /* DISCOGRAPHY */
+
+    .wrapperDisc {
+        /* display: none; */
+        background-size: auto;
+        background-position: 0% 110%;
+        height: auto;
+    }
+
+    .naglowek img {
+        width: 80%;
+        margin: 50px 0 30px 0;
+    }
+
+    .naglowek p {
+        display: block;
+        width: 70%;
+        font-size: 15px;
+    }
+
+    .discSongs {
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 80px auto 90px;
+    }
+
+    .discSongs .date {
+        width: 70%;
+        margin-bottom: 40px;
+    }
+
+    .discSongs .description {
+        width: 70%;
+        text-align: center;
+    }
+
+    .discSongs .description h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .discSongs .description p {
+        font-size: 15px;
+    }
+
+    .discSongs:nth-of-type(3) .description p {
+        color: black;
+    }
+
+    .discSongs .description button {
+        margin-bottom: 30px;
+    }
+
+    /* CONCERT */
+    .wrapperConcert {
+        height: auto;
+        background-size: auto;
+        background-position: 0% 40%;
+        text-align: center;
+    }
+
+    .wrapperConcert .naglowek p {
+        color: black;
+    }
+
+
+    .wrapperConcert .descTours {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .wrapperConcert .descTours .date {
+        margin: 50px auto;
+        width: 70%;
+    }
+
+    .wrapperConcert .descTours .date span {
+        color: black;
+    }
+
+    .descTours .present {
+        align-items: center;
+    }
+
+
+    .descTours .present p {
+        margin: 0;
+        text-align: center;
+        color: black;
+        font-size: 18px;
+        width: 70%;
+    }
+
+    .descTours .present p:first-child {
+        margin-top: 0px;
+    }
+
+    .descTours .present button {
+        background-color: black;
+        color: white;
+        opacity: 0.6;
+        margin-bottom: 40px;
+    }
+
+    /* LATTER COMPOSITIONS */
+
+    .wrapperLatter {
+        height: 0;
+        min-height: 100vh
+    }
+
+    .songPlayer {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        height: 100%;
+        margin: 50px auto 0;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .square {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        transform-origin: center;
+        background-color: rgb(245, 246, 246);
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+    }
+
+
+    .aboutSong {
+        width: 100%;
+        height: 50%;
+        background-color: rgb(245, 246, 246);
+        padding: 20px;
+        text-align: center;
+    }
+
+    .likes {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        color: rgb(121, 130, 133);
+        font-size: 12px;
+        margin-top: 30px
+    }
+
+    .likes span {
+        margin-right: 10px;
+        width: 100%;
+    }
+
+    .likes .fas {
+        margin-right: 5px;
+    }
+
+
+    .video {
+        width: 100%;
+        height: 50%;
+    }
+
+    .aboutSong .date span {
+        display: block;
+        margin: 0 auto;
+        width: 75%;
+        border-bottom: 1px solid black;
+    }
+
+
+    .aboutSong h1 {
+        margin-top: 10px;
+        font-size: 17px;
+        text-align: center;
+    }
+
+
+    .aboutSong p {
+        color: rgb(121, 130, 133);
+        font-size: 13px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .aboutSong a {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        background-color: black;
+        color: white;
+        opacity: 0.5;
+        border: 2px solid lightgray;
+    }
+
+    /* MODAL */
+
+    .close {
+        z-index: 4;
+    }
+
+    .modal-div {
+        border: 2px solid lightgray;
+        height: 90%;
+    }
+
+
+    .modalDiv {
+        top: 97%;
+        left: 50%;
+    }
+
+
+    .modalDiv .buttonAddSong {
+        margin: 70px 0 20px;
+        background-color: black;
+        border: 2px solid lightgray;
+        color: white;
+        opacity: 0.6;
+        height: 40px;
+        width: 120px;
+    }
+}
+
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    /*HEADER*/
+
+    .wrapper {
+        background-size: auto;
+        background-size: 60% 50%, cover;
+    }
+
+    .menu {
+        padding: 0px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .menu a {
+        margin: 0;
+        font-size: 14px;
+
+    }
+
+
+    /* DISCOGRAPHY */
+
+    .wrapperDisc {
+        /* display: none; */
+        background-size: auto;
+        background-position: 0% 110%;
+        min-height: auto;
+    }
+
+    .naglowek img {
+        width: 80%;
+        margin: 50px 0 30px 0;
+    }
+
+    .naglowek p {
+        display: block;
+        width: 70%;
+        font-size: 15px;
+    }
+
+    .discSongs {
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 80px auto 90px;
+    }
+
+    .discSongs .date {
+        width: 70%;
+        margin-bottom: 40px;
+    }
+
+    .discSongs .description {
+        width: 70%;
+        text-align: center;
+    }
+
+    .discSongs .description h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .discSongs .description p {
+        font-size: 15px;
+    }
+
+    .discSongs:nth-of-type(3) .description p {
+        color: black;
+    }
+
+    .discSongs:nth-of-type(3) .description button {
+        margin-bottom: 50px
+    }
+
+    /* CONCERT */
+    .wrapperConcert {
+        height: auto;
+        background-size: auto;
+        background-position: 0% 18%;
+        text-align: center;
+    }
+
+    .wrapperConcert .naglowek p {
+        color: black;
+    }
+
+
+    .wrapperConcert .descTours {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .wrapperConcert .descTours .date {
+        margin: 50px auto;
+        width: 70%;
+    }
+
+    .wrapperConcert .descTours .date span {
+        color: black;
+    }
+
+    .descTours .present {
+        align-items: center;
+    }
+
+
+    .descTours .present p {
+        margin: 0;
+        text-align: center;
+        color: black;
+        font-size: 18px;
+        width: 70%;
+    }
+
+    .descTours .present p:first-child {
+        margin-top: 0px;
+    }
+
+    .descTours .present button {
+        background-color: black;
+        color: white;
+        opacity: 0.6;
+        margin-bottom: 50px;
+    }
+
+    /* LATTER COMPOSITIONS */
+
+    .wrapperLatter {
+        height: 0;
+        min-height: 100vh;
+    }
+
+    .songPlayer {
+        flex-direction: row;
+        align-items: center;
+        width: 100vw;
+        height: 100%;
+        margin: 50px auto 0;
+        justify-content: center;
+    }
+
+    .square {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        transform-origin: center;
+        background-color: rgb(245, 246, 246);
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+    }
+
+
+    .aboutSong {
+        width: 50%;
+        height: 80%;
+        background-color: rgb(245, 246, 246);
+        padding: 20px;
+        text-align: center;
+    }
+
+
+    .video {
+        width: 50%;
+        height: 80%;
+    }
+
+    .aboutSong .date span {
+        display: block;
+        margin: 0 auto;
+        width: 75%;
+        border-bottom: 1px solid black;
+    }
+
+
+    .aboutSong h1 {
+        margin-top: 10px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+
+    .aboutSong p {
+        color: rgb(121, 130, 133);
+        margin-top: 10px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .aboutSong a {
+        margin-top: 10px;
+        background-color: black;
+        width: 130px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 12px;
+        color: white;
+        opacity: 0.5;
+        border: 2px solid lightgray;
+
+    }
+
+    .likes {
+        position: absolute;
+        right: 1%;
+        bottom: 2%;
+        font-size: 12px;
+        color: rgb(121, 130, 133);
+    }
+
+    .likes span {
+        margin-right: 10px;
+    }
+
+    .likes .fas {
+        margin-right: 5px;
+    }
+
+
+    /* MODAL */
+
+    .close {
+        z-index: 4;
+    }
+
+    .modal-div {
+        border: 2px solid lightgray;
+    }
+
+
+    .modalDiv {
+        top: 96%;
+        left: 75%;
+        z-index: 2;
+    }
+
+
+    .modalDiv .buttonAddSong {
+        margin: 70px 0 20px;
+        background-color: black;
+        border: 2px solid lightgray;
+        color: white;
+        opacity: 0.6;
+        height: 40px;
+        width: 120px;
+    }
+
+    .modal-display-block {
+        z-index: 3;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 10px;
+
+        width: 100%;
+
+    }
+
+    .divDate {
+        margin-top: 5px;
+    }
+
+    label {
+        width: 45%;
+        display: block;
+        margin-top: 0px;
+    }
+
+    input {
+        width: 80%;
+        margin-top: 5px;
+        height: 14px;
+        font-size: 12px;
+        margin-right: 40px;
+    }
+
+    form button {
+        margin: 10px auto;
+        height: 30px;
+        opacity: 0.6;
+        background-color: black;
+        color: white;
+    }
+
+    form span {
+        font-size: 8px;
+    }
+
+    textarea {
+        margin-top: 20px;
+        min-width: 100%;
+        max-width: 100%;
+        max-height: 50px;
+        min-height: 50px;
+        padding: 10px;
+        border: 1px solid gray;
+        font-size: 10px;
+    }
+
+    /* MODAL2 */
+
+    .newDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newDiv ul {
+        list-style: none;
+        margin: 5px 0;
+    }
+
+    .newDiv ul li {
+        margin: 5px 0;
+        font-size: 12.5px;
+    }
+
+    .newDiv h1 {
+        font-size: 15px;
+        margin-top: 0px;
+    }
+
+    .newDiv iframe {
+        width: 60%;
+        height: 25%;
+    }
+
+    .buttonsModal2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .newDiv button {
+        margin: 20px 0 0 10px;
+        height: 40px;
+        transition: 0.3s
+    }
+
+}
+
+
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+    body {
+        width: 100vw;
+        /* height: 100vh; */
+        overflow-x: hidden;
+    }
+
+    .wrapper {
+        background-size: 100% 50%, cover;
+    }
+
+    .menu {
+        position: fixed;
+        opacity: 0.7;
+        width: 100vw;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: rgb(229, 230, 230);
+        z-index: 2;
+        padding: 0;
+    }
+
+    .menu a {
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+        /* margin: 10px; */
+        color: black;
+        padding: 0;
+        transition: 0.1s ease;
+        line-height: 40px;
+        font-size: 10px;
+        /* padding-bottom: 20px; */
+
+    }
+
+
+    /* DISCOGRAPHY */
+
+    .wrapperDisc {
+        /* display: none; */
+        background-size: auto;
+        background-position: 0% 110%;
+        min-height: 1950px;
+    }
+
+    .naglowek img {
+        width: 70%;
+        margin: 150px 0 50px 0;
+    }
+
+    .naglowek p {
+        display: block;
+        width: 70%;
+        font-size: 18px;
+    }
+
+    .discSongs {
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 100px auto 110px;
+    }
+
+    .discSongs .date {
+        width: 70%;
+        margin-bottom: 40px;
+    }
+
+    .discSongs .description {
+        width: 70%;
+        text-align: center;
+    }
+
+    .discSongs .date h3 {
+        font-size: 20px;
+    }
+
+    .discSongs .description h1 {
+        font-size: 25px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .discSongs .description p {
+        font-size: 17px;
+    }
+
+    .discSongs:nth-of-type(3) p {
+
+        color: black
+    }
+
+    /* CONCERT */
+    .wrapperConcert {
+        min-height: 0px;
+        height: auto;
+        background-size: auto;
+        background-position: 0% 10%;
+        text-align: center;
+    }
+
+    .wrapperConcert .naglowek p {
+        color: black;
+        font-size: 20px;
+    }
+
+
+    .wrapperConcert .descTours {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .wrapperConcert .descTours .date {
+        margin: 100px auto;
+        width: 70%;
+    }
+
+    .wrapperConcert .descTours .date span {
+        color: black;
+        font-size: 15px;
+    }
+
+    .wrapperConcert .descTours .date h3 {
+        font-size: 20px;
+    }
+
+    .descTours .present {
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    .descTours .present p {
+        margin: 0px;
+        text-align: center;
+        color: black;
+        font-size: 20px;
+        width: 70%;
+    }
+
+    .descTours .present p:first-child {
+        margin-top: 0px;
+    }
+
+    .descTours .present button {
+        margin-bottom: 50px;
+        background-color: black;
+        color: white;
+        opacity: 0.6;
+    }
+
+    /* LATTER COMPOSITIONS */
+
+    .wrapperLatter {
+        height: 0;
+        min-height: 350px;
+    }
+
+    .songPlayer {
+        flex-direction: row;
+        align-items: center;
+        width: 100vw;
+        height: 100%;
+        margin: 50px auto 0;
+        justify-content: center;
+    }
+
+    .square {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        transform-origin: center;
+        background-color: rgb(245, 246, 246);
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+    }
+
+
+    .aboutSong {
+        width: 50%;
+        height: 100%;
+        background-color: rgb(245, 246, 246);
+        padding: 20px;
+        text-align: center;
+    }
+
+
+    .video {
+        width: 50%;
+        height: 100%;
+    }
+
+    .aboutSong .date span {
+        display: block;
+        margin: 0 auto;
+        width: 75%;
+        border-bottom: 1px solid black;
+    }
+
+
+    .aboutSong h1 {
+        margin-top: 10px;
+        font-size: 17px;
+        text-align: center;
+    }
+
+
+    .aboutSong p {
+        color: rgb(121, 130, 133);
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .aboutSong a {
+        background-color: black;
+        color: white;
+        opacity: 0.5;
+        border: 2px solid lightgray;
+    }
+
+    /* MODAL */
+
+    .close {
+        z-index: 4;
+    }
+
+    .modal-div {
+        border: 2px solid lightgray;
+    }
+
+
+    .modalDiv {
+        top: 96%;
+        left: 70%;
+    }
+
+
+    .modalDiv .buttonAddSong {
+        margin: 70px 0 20px;
+        background-color: black;
+        border: 2px solid lightgray;
+        color: white;
+        opacity: 0.6;
+        height: 50px;
+        width: 160px;
+    }
+
+    form {
+        text-align: center;
+        margin: 15px;
+    }
+
+    label {
+        display: block;
+        margin-top: 20px;
+    }
+
+    input {
+        margin: 18px 0;
+        width: 70%;
+        height: 22px;
+        font-size: 18px;
+    }
+
+    form button {
+        margin: 30px auto;
+        opacity: 0.6;
+        background-color: black;
+        color: white;
+    }
+
+    form span {
+        font-size: 15px;
+    }
+
+    textarea {
+        min-width: 70%;
+        max-width: 70%;
+        max-height: 100px;
+        min-height: 100px;
+        padding: 10px;
+        border: 1px solid gray;
+        font-size: 18px;
+    }
+
+    /* MODAL2 */
+
+    .newDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newDiv ul {
+        list-style: none;
+        margin: 5px 0;
+    }
+
+    .newDiv ul li {
+        margin: 10px 0;
+    }
+
+    .newDiv h1 {
+        margin-top: 15px;
+    }
+
+    .newDiv iframe {
+        width: 60%;
+        height: 25%;
+    }
+
+    .buttonsModal2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .newDiv button {
+        margin: 30px 0 0 10px;
+        transition: 0.3s
+    }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+
+    .wrapper {
+        height: 100vh;
+        background-image: url("img/napisDJ.png"), url("img/djLogo.png");
+        background-repeat: no-repeat;
+        background-position-y: 38%, 0%;
+        background-position-x: 46.5%, center;
+        background-size: 40% 40%, cover;
+    }
+
+    .menu {
+        position: fixed;
+        opacity: 0.7;
+        width: 100vw;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: rgb(229, 230, 230);
+        z-index: 1;
+        padding-bottom: 20px;
+    }
+
+    .menu a {
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin: 0px;
+        color: black;
+        padding: 6px;
+        transition: 0.1s ease;
+        font-size: 11.5px;
+        /* padding-bottom: 20px; */
+
+    }
+
+    /* DISCOGRAPHY */
+
+    .wrapperDisc {
+        /* display: none; */
+        background-size: auto;
+        background-position: 0% 110%;
+        min-height: 2460px;
+    }
+
+    .naglowek p {
+        font-size: 22px;
+    }
+
+    .discSongs {
+        margin: 130px auto 150px;
+    }
+
+    .discSongs .date {
+        margin-bottom: 45px;
+    }
+
+    .discSongs .date span {
+        font-size: 15px;
+    }
+
+    .discSongs .date h3 {
+        font-size: 23px;
+    }
+
+    .discSongs .description h1 {
+        font-size: 28px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .discSongs .description p {
+        font-size: 22px;
+    }
+
+    .discSongs .description button {
+        background-size: cover;
+        margin-bottom: 50px;
+        width: 280px;
+        height: 70px;
+    }
+
+    /* CONCERT */
+    .wrapperConcert {
+        height: auto;
+        background-size: auto;
+        background-position: 0% 500%;
+        text-align: center;
+    }
+
+    .wrapperConcert .naglowek p {
+        font-size: 22px;
+    }
+
+
+    .wrapperConcert .descTours .date {
+        margin: 130px auto 80px;
+    }
+
+    .wrapperConcert .descTours .date span {
+        font-size: 18px;
+    }
+
+    .wrapperConcert .descTours .date h3 {
+        font-size: 24px;
+    }
+
+    .descTours .present p {
+        font-size: 22px;
+    }
+
+    .descTours .present button {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 270px;
+        height: 70px;
+    }
+
+    /* LATTER COMPOSITIONS */
+
+    .wrapperLatter {
+        height: 50vh;
+        /* min-height: 250px; */
+        margin: 80px 0 0 0;
+    }
+
+
+
+    .songPlayer {
+        flex-direction: row;
+        z-index: 0;
+    }
+
+    .square {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+
+    .aboutSong {
+        width: 50%;
+        height: 100%;
+        padding: 20px;
+        z-index: 0;
+        text-align: center;
+    }
+
+
+    .video {
+        width: 50%;
+        z-index: 0;
+        height: 100%;
+    }
+
+    .aboutSong .date span {
+        margin: 0 auto;
+        width: 75%;
+        border-bottom: 1px solid black;
+    }
+
+
+    .aboutSong h1 {
+        margin-top: 20px;
+        font-size: 22px;
+    }
+
+
+    .aboutSong p {
+        font-size: 16px;
+    }
+
+    .aboutSong a {
+        background-color: black;
+        color: white;
+        opacity: 0.5;
+        border: 2px solid lightgray;
+        line-height: 50px;
+        font-size: 18px;
+        width: 180px;
+        height: 50px;
+    }
+
+    .likes {
+        position: absolute;
+        right: 1%;
+        bottom: 2%;
+        font-size: 13px;
+        color: rgb(121, 130, 133);
+    }
+
+    .likes span {
+        margin-right: 10px;
+    }
+
+    .likes .fas {
+        margin-right: 5px;
+    }
+
+    /* MODAL */
+
+    .close {
+        z-index: 4;
+    }
+
+    .modal-div {
+        border: 2px solid lightgray;
+        display: flex;
+    }
+
+
+    .modalDiv {
+        top: 96%;
+        left: 70%;
+    }
+
+
+    .modalDiv .buttonAddSong {
+        margin: 80px 0 20px;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        margin: 10px;
+        width: 100%;
+
+    }
+
+    label {
+        width: 45%;
+        display: block;
+        margin-top: 0px;
+    }
+
+    input {
+        width: 80%;
+        margin-top: 5px;
+        height: 14px;
+        font-size: 12px;
+        margin-right: 40px;
+    }
+
+    form button {
+        margin: 10px auto;
+        height: 30px;
+        opacity: 0.6;
+        background-color: black;
+        color: white;
+    }
+
+    form span {
+        font-size: 8px;
+    }
+
+    textarea {
+        margin-top: 20px;
+        min-width: 100%;
+        max-width: 100%;
+        max-height: 50px;
+        min-height: 50px;
+        padding: 10px;
+        border: 1px solid gray;
+        font-size: 10px;
+    }
+
+    /* MODAL2 */
+
+    .newDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newDiv ul {
+        list-style: none;
+        margin: 5px 0;
+    }
+
+    .newDiv ul li {
+        margin: 5px 0;
+        font-size: 12.5px;
+    }
+
+    .newDiv h1 {
+        font-size: 15px;
+        margin-top: 0px;
+    }
+
+    .newDiv iframe {
+        width: 60%;
+        height: 25%;
+    }
+
+    .buttonsModal2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .newDiv button {
+        margin: 20px 0 0 10px;
+        height: 40px;
+        transition: 0.3s
+    }
+
+
+}
+
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    .menu {
+        z-index: 2;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+}
